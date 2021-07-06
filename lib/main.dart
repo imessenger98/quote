@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0),
+              margin: const EdgeInsets.all(20),
               child: Center(
                 child: randomquote(),
               ),
@@ -29,14 +29,20 @@ class MyApp extends StatelessWidget {
 
 randomquote() {
   var list = [
-    'The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela',
-    'work like a dog live like a king',
-    'The way to get started is to quit talking and begin doing. -Walt Disney',
-    'If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt',
-    'If you look at what you have in life, you\'ll always have more. If you look at what you don\'t have in life, you\'ll never have enough. -Oprah Winfrey'
+    'The greatest glory in living lies not in never falling, but in rising every time we fall. \n\n-Nelson Mandela',
+    'Work like a dog live like a king',
+    'The way to get started is to quit talking and begin doing. \n\n-Walt Disney',
+    'If life were predictable it would cease to be life, and be without flavor. \n\n-Eleanor Roosevelt',
+    'If you look at what you have in life, you\'ll always have more. If you look at what you don\'t have in life, you\'ll never have enough. \n\n-Oprah Winfrey'
   ];
   final _random = new Random();
 
   var element = list[_random.nextInt(list.length)];
-  return (Text(element, style: TextStyle(color: Colors.white)));
+  return (Text(element,
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w300,
+        fontSize: 16,
+        letterSpacing: 1.5,
+      )));
 }
