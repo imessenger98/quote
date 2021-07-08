@@ -35,7 +35,11 @@ class MyAppState extends State<MyApp> {
             backgroundColor: Colors.white,
             onPressed: () {
               setState(() {
+                var temp = a;
                 a = randomquote(lst.length);
+                if (a == temp) {
+                  a = randomquote(lst.length);
+                }
               });
             },
             child: Icon(
